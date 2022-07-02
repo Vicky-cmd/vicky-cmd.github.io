@@ -3,9 +3,17 @@
     padding: 10rem 0;
     font-size: 1.4rem;
 
+    @include respond(tab-port) {
+        padding: 8rem 0;
+    }
+
     &__logo-box {
         text-align: center;
         margin-bottom: 8rem;
+        
+        @include respond(tab-port) {
+            margin-bottom: 6rem;
+        }
     }
     
     &__logo {
@@ -18,11 +26,17 @@
         border-top: 1px solid $color-grey-dark;
         padding-top: 2rem;
         display: inline-block;
+        
+        @include respond(tab-port) {
+            width: 100%;
+            text-align: center;
+            align-items: center;
+        }
     }
     
     &__list {
         list-style: none;
-        display: block;
+        display: inline-block;
         width: fit-content;
     }
     
@@ -58,5 +72,11 @@
         float: right;
         border-top: 1px solid $color-grey-dark;
         padding: 2rem;
+
+        
+        @include respond(tab-port) {
+            width: 100%;
+            float: none;
+        }
     }
 }

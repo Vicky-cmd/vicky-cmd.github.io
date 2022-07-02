@@ -78,9 +78,23 @@
                     </div>
                     <div class="col-1-of-2">
                         <div class="composition">
-                            <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
+
+                            <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w" alt="Photo 1"
+                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                                 class="composition__photo composition__photo--p1"
+                                 src="img/nat-1-large.jpg">
+                            <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w" alt="Photo 2"
+                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                                 class="composition__photo composition__photo--p2"
+                                 src="img/nat-2-large.jpg">
+                            <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w" alt="Photo 3"
+                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                                 class="composition__photo composition__photo--p3"
+                                 src="img/nat-3-large.jpg">
+
+                            <!-- <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
                             <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-                            <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+                            <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3"> -->
                         </div>
                     </div>
                 </div>
@@ -174,7 +188,7 @@
                                             $297
                                         </p>
                                     </div>
-                                    <a href="#" class="btn btn--white">Book Now</a>
+                                    <a href="#popup" class="btn btn--white">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -208,7 +222,7 @@
                                             $497
                                         </p>
                                     </div>
-                                    <a href="#" class="btn btn--white">Book Now</a>
+                                    <a href="#popup" class="btn btn--white">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -242,7 +256,7 @@
                                             $897
                                         </p>
                                     </div>
-                                    <a href="#" class="btn btn--white">Book Now</a>
+                                    <a href="#popup" class="btn btn--white">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -263,8 +277,8 @@
                     </video>
                 </div>
 
-                <div class="u-center-text">
-                    <h2 class="heading-secondary u-margin-bottom-big">
+                <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-secondary">
                         We make people genuinely happy
                     </h2>
                 </div>
@@ -360,7 +374,13 @@
 
         <footer class="footer">
             <div class="footer__logo-box">
-                <img src="img/logo-green-2x.png" alt="Full Logo" class="footer__logo">
+
+                <picture class="footer__logo">
+                    <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" 
+                            media="(max-width: 37.5em)">
+                    <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full Logo" class="footer__logo" src="img/logo-green-2x.png">
+                </picture>
+
             </div>
             <div class="row">
                 <div class="col-1-of-2">
@@ -381,6 +401,26 @@
                 </div>
             </div>
         </footer>
+
+        <div class="popup" id="popup">
+            <div class="popup__content">
+                <a href="#section-tours" class="popup__close">&times;</a>
+                <div class="popup__left">
+                    <img src="img/nat-8.jpg" alt="Person On A Tour" class="popup__img">
+                    <img src="img/nat-9.jpg" alt="Person On A Tour" class="popup__img">
+                </div>
+                <div class="popup__right">
+                    <h2 class="heading-secondary u-margin-bottom-small">
+                        Start Booking Now
+                    </h2>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
+                    <p class="popup__text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum exercitationem eveniet eos numquam? Nisi, aut. Rerum, similique minima? Facere officiis laudantium consequuntur pariatur vitae rem voluptatum illum aliquid perspiciatis voluptatem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo cupiditate, iure quia incidunt omnis laborum non consequuntur soluta, voluptatem vitae doloribus, expedita amet qui quidem dolor odio temporibus assumenda sapiente! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim consequuntur vero ipsa ducimus explicabo maxime, eos necessitatibus ullam, velit quod repellat recusandae sequi impedit ea ratione reprehenderit inventore maiores sint? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore sunt similique facilis sit modi amet! Esse, rem.
+                    </p>
+                    <a href="#" class="btn btn--primary">Book Now</a>
+                </div>
+            </div>
+        </div>
 
         <!--
         <section class="grid-test">
@@ -446,9 +486,5 @@
             </div>
         </section>
         -->
-
-        <main>
-            
-        </main>
     </body>
 </html>
